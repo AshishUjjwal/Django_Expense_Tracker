@@ -1,0 +1,62 @@
+# Ignore Python-related files
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+db.sqlite3
+.env
+venv/
+instance/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+
+# Ignore Django migrations
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+
+# Ignore compiled files
+*.so
+*.out
+*.o
+
+# Ignore virtual environments
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore Static and Media files (Optional)
+staticfiles/
+media/
+
+# Ignore Node.js dependencies for frontend
+frontend/node_modules/
+frontend/.npm/
+frontend/.cache/
+
+# Ignore Build files
+frontend/build/
+frontend/dist/
+frontend/.next/
+frontend/.nuxt/
+frontend/.angular/
+
+# Ignore dependency lock files
+frontend/package-lock.json
+frontend/yarn.lock
+frontend/pnpm-lock.yaml
+
+# Ignore Logs and temporary files
+logs/
+*.log
+*.gz
+*.tmp
