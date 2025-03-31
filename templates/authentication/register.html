@@ -15,11 +15,13 @@
         <div class="card-title py-3">
           <h4>Register for a free account</h4>
         </div>
-        {% comment %} <form action="{% url 'register' %}" method="post"> {% endcomment %}
-        <form  method="post">
+        <form action="{% url 'register' %}" method="post">
+          {% comment %} It dynamically generates the URL for the Django view named "register". {% endcomment %}
+          {% comment %} When the form is submitted, the data is sent to the register view. {% endcomment %}
+          
           {% csrf_token %}
 
-          {% comment %} {% include 'partials/_messages.html' %} {% endcomment %}
+          {% include 'partials/_messages.html' %}
           <div class="form-group">
             <input
               type="text"
@@ -44,6 +46,7 @@
               value="{{fieldValues.email}}"
             />
           </div>
+          <br>
 
           <div class="emailFeedBackArea invalid-feedback" style="display:none">
           </div>

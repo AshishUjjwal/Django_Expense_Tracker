@@ -14,6 +14,7 @@ from pathlib import Path
 import environ
 import os
 import django_heroku
+from django.contrib import messages
 
 # load_dotenv("source.env")
 
@@ -133,6 +134,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
+
+MESSAGE_TAGS = {
+    messages.ERROR : 'danger'
+}
 
 # Why Use STATIC_ROOT?
 # In production, Django does not serve static files directly. Instead, all static files need to be collected in a single directory, which can then be served by a web server like Nginx, Apache, or a CDN.
